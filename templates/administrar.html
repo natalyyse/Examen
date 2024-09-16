@@ -51,6 +51,7 @@
                 <td>{{ registro[3] }}</td>
                 <td>{{ registro[4] }}</td>
                 <td>
+                    <!-- Corregido el url_for con el nombre correcto de la ruta -->
                     <form action="{{ url_for('eliminar_registro', dni=registro[0]) }}" method="POST">
                         <button type="submit" onclick="return confirm('¿Está seguro de que desea eliminar este registro?')">Eliminar</button>
                     </form>
