@@ -45,11 +45,11 @@
         <tbody>
             {% for registro in registros %}
             <tr>
-                <td>{{ registro[0] }}</td>
                 <td>{{ registro[1] }}</td>
                 <td>{{ registro[2] }}</td>
                 <td>{{ registro[3] }}</td>
                 <td>{{ registro[4] }}</td>
+                <td>{{ registro[5] }}</td>
                 <td>
                     <!-- Corregido el url_for con el nombre correcto de la ruta -->
                     <form action="{{ url_for('eliminar_registro', dni=registro[0]) }}" method="POST">
