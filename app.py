@@ -6,10 +6,10 @@ import os
 app = Flask(__name__, template_folder='templates')
 
 # Configuración de la base de datos
-DB_HOST = 'dpg-crk9dndumphs73agcl90-a.oregon-postgres.render.com'
-DB_NAME = 'dbexamen'
-DB_USER = 'dbexamen_d4s6_user'
-DB_PASSWORD = 'KHiAF8D3coVcV59wRBFgBi8GrOJUQCMV'
+DB_HOST = 'dpg-crka4s9u0jms73bikjqg-a.oregon-postgres.render.com'
+DB_NAME = 'nubes'
+DB_USER = 'nubes_user'
+DB_PASSWORD = 'CVnZl5Y3QemAATTQPD3gzr2R7tAdHe8m'
 
 
 def conectar_db():
