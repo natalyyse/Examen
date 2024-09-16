@@ -34,7 +34,6 @@
     <table>
         <thead>
             <tr>
-                <!-- Eliminamos la columna ID -->
                 <th>DNI</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -46,13 +45,13 @@
         <tbody>
             {% for registro in registros %}
             <tr>
-                <!-- Ya no mostramos el ID -->
                 <td>{{ registro[1] }}</td> <!-- DNI -->
                 <td>{{ registro[2] }}</td> <!-- Nombre -->
                 <td>{{ registro[3] }}</td> <!-- Apellido -->
                 <td>{{ registro[4] }}</td> <!-- Dirección -->
                 <td>{{ registro[5] }}</td> <!-- Teléfono -->
                 <td>
+                    <!-- Formulario para eliminar el registro con el DNI específico -->
                     <form action="{{ url_for('eliminar_registro', dni=registro[1]) }}" method="POST">
                         <button type="submit" class="delete-button" onclick="return confirm('¿Está seguro de que desea eliminar este registro?')">Eliminar</button>
                     </form>
