@@ -34,6 +34,7 @@
     <table>
         <thead>
             <tr>
+                <th>ID</th>
                 <th>DNI</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -45,14 +46,15 @@
         <tbody>
             {% for registro in registros %}
             <tr>
-                <td>{{ registro[1] }}</td>
-                <td>{{ registro[2] }}</td>
-                <td>{{ registro[3] }}</td>
-                <td>{{ registro[4] }}</td>
-                <td>{{ registro[5] }}</td>
+                <!-- Aquí corregimos el orden de los datos en función de la base de datos -->
+                <td>{{ registro[0] }}</td> <!-- ID -->
+                <td>{{ registro[1] }}</td> <!-- DNI -->
+                <td>{{ registro[2] }}</td> <!-- Nombre -->
+                <td>{{ registro[3] }}</td> <!-- Apellido -->
+                <td>{{ registro[4] }}</td> <!-- Dirección -->
+                <td>{{ registro[5] }}</td> <!-- Teléfono -->
                 <td>
-                    <!-- Corregido el url_for con el nombre correcto de la ruta -->
-                    <form action="{{ url_for('eliminar_registro', dni=registro[0]) }}" method="POST">
+                    <form action="{{ url_for('eliminar_registro', dni=registro[1]) }}" method="POST">
                         <button type="submit" onclick="return confirm('¿Está seguro de que desea eliminar este registro?')">Eliminar</button>
                     </form>
                 </td>
